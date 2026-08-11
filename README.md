@@ -1,6 +1,6 @@
 # VoltControl
 
-**Monitoramento inteligente de consumo de energia elétrica.**
+**Controle Inteligente de Energia**
 
 VoltControl é um dashboard web que permite acompanhar gastos com energia elétrica, definir metas mensais e visualizar a evolução do consumo ao longo do tempo, tudo armazenado localmente no navegador, sem necessidade de cadastro.
 

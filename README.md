@@ -8,9 +8,9 @@ VoltControl é um dashboard web que permite acompanhar gastos com energia elétr
 
 ## Páginas
 
-- **Adicionar Conta** — wizard de 5 passos para registrar os dados da fatura
-- **Dashboard** — visão geral com feedback, gráfico comparativo e resumo financeiro
-- **Histórico** — tabela de registros mensais com exportação em PDF
+- **Adicionar Conta** - wizard de 5 passos para registrar os dados da fatura
+- **Dashboard** - visão geral com feedback, gráfico comparativo e resumo financeiro
+- **Histórico** - tabela de registros mensais com exportação em PDF
 
 ## Tecnologias
 

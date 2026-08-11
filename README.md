@@ -6,15 +6,11 @@ VoltControl é um dashboard web que permite acompanhar gastos com energia elétr
 
 **[Acesse o VoltControl](https://voltcontrol.netlify.app)**
 
----
-
 ## Páginas
 
 - **Adicionar Conta** — wizard de 5 passos para registrar os dados da fatura
 - **Dashboard** — visão geral com feedback, gráfico comparativo e resumo financeiro
 - **Histórico** — tabela de registros mensais com exportação em PDF
-
----
 
 ## Tecnologias
 
@@ -29,8 +25,6 @@ VoltControl é um dashboard web que permite acompanhar gastos com energia elétr
 | jsPDF + AutoTable | Exportação de histórico em PDF |
 | CSS (arquivos separados) | Estilização por componente |
 | Vite 8 | Bundler e servidor de desenvolvimento |
-
----
 
 ## Estrutura de Pastas
 
@@ -87,8 +81,6 @@ src/
 └── main.jsx              # Entrypoint com BrowserRouter e EnergyProvider
 ```
 
----
-
 ## Como Rodar
 
 ```bash
@@ -104,8 +96,6 @@ npm run dev
 ```
 
 Acesse **http://localhost:5173** no navegador.
-
----
 
 ## Lógica de Cálculo
 
@@ -124,8 +114,6 @@ Limite em kWh da Meta   = Custo com Energia Meta ÷ tarifa
 - **Amarelo** — até 10% acima da meta
 - **Vermelho** — mais de 10% acima da meta
 
----
-
 ## Arquitetura
 
 O projeto segue o princípio de **separação de responsabilidades**:
@@ -136,13 +124,9 @@ O projeto segue o princípio de **separação de responsabilidades**:
 - **`utils/`** — funções puras de cálculo e formatação, fáceis de testar
 - **`services/`** — abstração de acesso a dados externos (LocalStorage e PDF)
 
----
-
 ## Persistência
 
 Os dados são salvos automaticamente no **LocalStorage** do navegador via `useEffect`. Nenhuma informação é enviada a servidores externos.
-
----
 
 ## Responsividade
 
@@ -151,13 +135,9 @@ A aplicação é totalmente responsiva:
 - **Tablet** — grid reorganizado, espaçamentos ajustados
 - **Desktop** — layout completo com sidebar fixa
 
----
-
 ## Autor
 
 Desenvolvido por **Rafael Trajano**
-
----
 
 ## Licença
 

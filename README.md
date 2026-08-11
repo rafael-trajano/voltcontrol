@@ -2,7 +2,7 @@
 
 **Monitoramento inteligente de consumo de energia elétrica.**
 
-VoltControl é um dashboard web que permite acompanhar gastos com energia elétrica, definir metas mensais e visualizar a evolução do consumo ao longo do tempo — tudo armazenado localmente no navegador, sem necessidade de cadastro.
+VoltControl é um dashboard web que permite acompanhar gastos com energia elétrica, definir metas mensais e visualizar a evolução do consumo ao longo do tempo, tudo armazenado localmente no navegador, sem necessidade de cadastro.
 
 **[Acesse o VoltControl](https://voltcontrol.netlify.app)**
 
@@ -99,7 +99,7 @@ Acesse **http://localhost:5173** no navegador.
 
 ## Lógica de Cálculo
 
-O feedback é baseado no **custo com energia** — o único valor que o usuário pode controlar, excluindo taxas e impostos fixos.
+O feedback é baseado no **custo com energia**, o único valor que o usuário pode controlar, excluindo taxas e impostos fixos.
 
 ```
 Custo com Energia Atual = kWh consumido × tarifa
@@ -110,19 +110,19 @@ Limite em kWh da Meta   = Custo com Energia Meta ÷ tarifa
 ```
 
 **Faixas de feedback:**
-- **Verde** — consumo dentro ou abaixo da meta
-- **Amarelo** — até 10% acima da meta
-- **Vermelho** — mais de 10% acima da meta
+- **Verde** - consumo dentro ou abaixo da meta
+- **Amarelo** - até 10% acima da meta
+- **Vermelho** - mais de 10% acima da meta
 
 ## Arquitetura
 
 O projeto segue o princípio de **separação de responsabilidades**:
 
-- **`constants/`** — centraliza todos os valores fixos, mensagens e configurações
-- **`hooks/`** — contém toda a lógica de negócio, deixando os componentes responsáveis apenas pela renderização
-- **`components/`** — componentes reutilizáveis e sem lógica de negócio própria
-- **`utils/`** — funções puras de cálculo e formatação, fáceis de testar
-- **`services/`** — abstração de acesso a dados externos (LocalStorage e PDF)
+- **`constants/`** - centraliza todos os valores fixos, mensagens e configurações
+- **`hooks/`** - contém toda a lógica de negócio, deixando os componentes responsáveis apenas pela renderização
+- **`components/`** - componentes reutilizáveis e sem lógica de negócio própria
+- **`utils/`** - funções puras de cálculo e formatação, fáceis de testar
+- **`services/`** - abstração de acesso a dados externos (LocalStorage e PDF)
 
 ## Persistência
 
@@ -131,9 +131,9 @@ Os dados são salvos automaticamente no **LocalStorage** do navegador via `useEf
 ## Responsividade
 
 A aplicação é totalmente responsiva:
-- **Mobile** — header fixo no topo, bottom navigation fixa, cards adaptados
-- **Tablet** — grid reorganizado, espaçamentos ajustados
-- **Desktop** — layout completo com sidebar fixa
+- **Mobile** - header fixo no topo, bottom navigation fixa, cards adaptados
+- **Tablet** - grid reorganizado, espaçamentos ajustados
+- **Desktop** - layout completo com sidebar fixa
 
 ## Autor
 

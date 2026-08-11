@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  --color-primary: #1a56db;
+  --color-primary-dark: #1e429f;
+  --color-primary-light: #e8f0fe;
+  --color-success: #059669;
+  --color-danger: #dc2626;
+  --color-warning: #f59e0b;
+
+  --color-bg: #ffffff;
+  --color-surface: #ffffff;
+  --color-sidebar-bg: #f1f5f9;
+  --color-border: #e2e8f0;
+
+  --color-text-primary: #0f172a;
+  --color-text-secondary: #64748b;
+  --color-text-muted: #94a3b8;
+
+  --font-heading: 'Barlow Condensed', sans-serif;
+  --font-main: 'Plus Jakarta Sans', sans-serif;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  min-height: 100vh;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  letter-spacing: 0.01em;
+}
+
+.app-wrapper {
+  display: flex;
+  min-height: 100vh;
+}
+
+.main-with-sidebar {
+  flex: 1;
+  padding: 48px 56px;
+  overflow-y: auto;
+  background: var(--color-bg);
+}
+
+/* Animações */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.main-with-sidebar > * {
+  animation: fadeIn 0.3s ease;
+}
+
+/* ===========================
+   Responsividade
+   =========================== */
+
+@media (max-width: 768px) {
+  .app-wrapper {
+    flex-direction: column;
+  }
+
+  .main-with-sidebar {
+    padding: 24px 20px 80px;
+  }
+}

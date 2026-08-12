@@ -58,7 +58,7 @@
 }
 
 .metric-card--blue .metric-card__value   { color: var(--color-primary); }
-.metric-card--green .metric-card__value  { color: #059669; }
+.metric-card--green .metric-card__value  { color: #0046DD; }
 .metric-card--orange .metric-card__value { color: #f59e0b; }
 
 .history__table-wrapper {
@@ -131,7 +131,7 @@
   font-weight: 600;
 }
 
-.economy--positive { color: #059669; }
+.economy--positive { color: #1BA041; }
 .economy--warning  { color: #d97706; }
 .economy--negative { color: #dc2626; }
 

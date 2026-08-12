@@ -33,7 +33,7 @@
 }
 
 .chart__legend-dot--actual { background: var(--color-primary); }
-.chart__legend-dot--goal   { background: #059669; }
+.chart__legend-dot--goal   { background: #0046DD; }
 
 .chart__legend-text {
   font-size: 13px;

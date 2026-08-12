@@ -4,7 +4,7 @@ export const FEEDBACK_CONFIG = {
   success: {
     variant: 'success',
     title: 'Parabéns!',
-    titleColor: '#059669',
+    titleColor: '#1BA041',
   },
   warning: {
     variant: 'warning',
@@ -37,7 +37,7 @@ export const DICA_TEXTS = {
 }
 
 export const DICA_COLORS = {
-  success: '#059669',
+  success: '#1BA041',
   warning: '#f59e0b',
   danger: '#dc2626',
 }

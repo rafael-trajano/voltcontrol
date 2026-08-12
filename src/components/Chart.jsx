@@ -26,7 +26,7 @@ function ChartComponent({
         datasets: [
           {
             data: [actualValue, goalValue],
-            backgroundColor: ['#1a56db', '#059669'],
+            backgroundColor: ['#1BA041','#1a56db'],
             borderRadius: 8,
             borderSkipped: false,
             barThickness: 60,

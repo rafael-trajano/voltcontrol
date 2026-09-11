@@ -71,7 +71,6 @@
 
 /* ====== MOBILE ====== */
 @media (max-width: 768px) {
-  /* Header fixo no topo com logo */
   .navbar {
     width: 100%;
     height: auto;
@@ -83,38 +82,33 @@
     border-bottom: none;
   }
 
-  /* Logo no topo — fundo cinza */
+  /* Sem header no mobile — o título de cada página já dá a orientação */
   .navbar__logo {
-    padding: 16px 20px 12px;
-    background: #FFFFFF;
-    border-bottom: 1px solid var(--color-border);
-  }
-
-  .navbar__logo-text {
-    font-size: 22px;
-  }
-
-  .navbar__logo-subtitle {
-    font-size: 11px;
+    display: none;
   }
 
   .navbar__divider {
     display: none;
   }
 
-  /* Nav fixo na parte inferior — fundo cinza */
+  /* Nav flutuante em pílula — cinza como o sidebar do desktop; overflow:hidden
+     recorta só as pontas em arco, os itens preenchem tudo por dentro (como no
+     hover/ativo original, sem espaçamento em volta) */
   .navbar__nav {
     position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    bottom: 12px;
+    left: 16px;
+    right: 16px;
     flex-direction: row;
     padding: 0;
     gap: 0;
     background: var(--color-sidebar-bg);
-    border-top: 1px solid var(--color-border);
+    border: none;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.14), 0 2px 6px rgba(15, 23, 42, 0.06);
     z-index: 100;
-    height: 56px;
+    height: auto;
   }
 
   .navbar__item {
@@ -125,12 +119,12 @@
     text-align: center;
     font-size: 12px;
     font-weight: 500;
-    padding: 0 4px;
+    padding: 18px 4px;
     border-radius: 0;
-    height: 100%;
+    height: auto;
     color: var(--color-text-muted);
-    background-color: #FFFFFF;
-    border-top: 2px solid transparent;
+    background-color: transparent;
+    border-top: none;
   }
 
   .navbar__item:hover {

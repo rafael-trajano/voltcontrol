@@ -69,6 +69,11 @@
   background: var(--color-primary-light);
 }
 
+/* Ícones só aparecem no celular */
+.navbar__icon {
+  display: none;
+}
+
 /* ====== MOBILE ====== */
 @media (max-width: 768px) {
   .navbar {
@@ -91,24 +96,28 @@
     display: none;
   }
 
-  /* Nav flutuante em pílula — cinza como o sidebar do desktop; overflow:hidden
-     recorta só as pontas em arco, os itens preenchem tudo por dentro (como no
-     hover/ativo original, sem espaçamento em volta) */
+  /* Barra fixa no rodapé, de ponta a ponta, só com ícones */
   .navbar__nav {
     position: fixed;
-    bottom: 12px;
-    left: 16px;
-    right: 16px;
+    bottom: 0;
+    left: 0;
+    right: 0;
     flex-direction: row;
-    padding: 0;
+    padding: 0 0 env(safe-area-inset-bottom);
     gap: 0;
-    background: var(--color-sidebar-bg);
-    border: none;
-    border-radius: var(--radius-sm);
-    overflow: hidden;
-    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.14), 0 2px 6px rgba(15, 23, 42, 0.06);
+    background: var(--color-surface);
+    border-top: 1px solid var(--color-border);
+    box-shadow: 0 -2px 10px rgba(15, 23, 42, 0.05);
     z-index: 100;
     height: auto;
+  }
+
+  .navbar__icon {
+    display: block;
+  }
+
+  .navbar__label {
+    display: none;
   }
 
   .navbar__item {
@@ -119,7 +128,7 @@
     text-align: center;
     font-size: 12px;
     font-weight: 500;
-    padding: 18px 4px;
+    padding: 14px 4px 16px;
     border-radius: 0;
     height: auto;
     color: var(--color-text-muted);

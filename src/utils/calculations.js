@@ -12,6 +12,17 @@ export function formatBRL(value) {
   })
 }
 
+export function formatNumber(value, decimals = 2) {
+  return Number(value).toLocaleString('pt-BR', {
+    minimumFractionDigits: decimals,
+    maximumFractionDigits: decimals,
+  })
+}
+
+export function formatPercent(fraction, decimals = 1) {
+  return `${formatNumber(fraction * 100, decimals)}%`
+}
+
 export function formatMonth(value) {
   if (!value) return ''
   const [year, month] = value.split('-')

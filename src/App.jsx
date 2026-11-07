@@ -3,6 +3,7 @@ import Navbar from './components/Navbar'
 import Questions from './pages/Questions'
 import Dashboard from './pages/Dashboard'
 import History from './pages/History'
+import Analysis from './pages/Analysis'
 import './App.css'
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/dashboard/:id" element={<Dashboard />} />
           <Route path="/history" element={<History />} />
+          <Route path="/analysis" element={<Analysis />} />
         </Routes>
       </main>
     </div>

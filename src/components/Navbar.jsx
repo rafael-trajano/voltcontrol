@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom'
+import PageIcon from './PageIcon'
 import './Navbar.css'
 
 function Navbar() {
@@ -14,21 +15,35 @@ function Navbar() {
       <nav className="navbar__nav">
         <NavLink
           to="/questions"
+          aria-label="Adicionar Conta"
           className={({ isActive }) => `navbar__item ${isActive ? 'navbar__item--active' : ''}`}
         >
-          Adicionar Conta
+          <PageIcon name="add" size={28} className="navbar__icon" />
+          <span className="navbar__label">Adicionar Conta</span>
         </NavLink>
         <NavLink
           to="/dashboard"
+          aria-label="Dashboard"
           className={({ isActive }) => `navbar__item ${isActive ? 'navbar__item--active' : ''}`}
         >
-          Dashboard
+          <PageIcon name="dashboard" size={28} className="navbar__icon" />
+          <span className="navbar__label">Dashboard</span>
         </NavLink>
         <NavLink
           to="/history"
+          aria-label="Histórico"
           className={({ isActive }) => `navbar__item ${isActive ? 'navbar__item--active' : ''}`}
         >
-          Histórico
+          <PageIcon name="history" size={28} className="navbar__icon" />
+          <span className="navbar__label">Histórico</span>
+        </NavLink>
+        <NavLink
+          to="/analysis"
+          aria-label="Análise"
+          className={({ isActive }) => `navbar__item ${isActive ? 'navbar__item--active' : ''}`}
+        >
+          <PageIcon name="analysis" size={28} className="navbar__icon" />
+          <span className="navbar__label">Análise</span>
         </NavLink>
       </nav>
     </aside>

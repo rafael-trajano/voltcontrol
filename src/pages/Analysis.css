@@ -1,0 +1,212 @@
+/* Segue os mesmos padrões de Dashboard.css e History.css */
+
+.analysis {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 1100px;
+}
+
+/* Métricas (mesmo estilo do Histórico, com 4 colunas) */
+.analysis__metrics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  overflow: hidden;
+}
+
+.metric-card--red .metric-card__value { color: #dc2626; }
+
+.analysis__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: stretch;
+}
+
+.analysis__card .card__body {
+  flex: 1;
+}
+
+.analysis__summary {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-left: 18px;
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
+.analysis__summary strong {
+  color: var(--color-text-primary);
+}
+
+.analysis__note {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  margin-top: -12px;
+}
+
+/* Gráficos */
+.analysis-chart {
+  position: relative;
+  height: 260px;
+}
+
+.analysis-chart--pie {
+  height: 260px;
+}
+
+/* Tabela de frequência: mantém fa / Fa diferentes */
+.analysis__freq-table th {
+  text-transform: none;
+  font-size: 12px;
+}
+
+.analysis__total-row td {
+  font-weight: 700;
+}
+
+/* Boxplot */
+.boxplot {
+  display: block;
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+  height: auto;
+  font-family: var(--font-main);
+}
+
+.boxplot__box {
+  fill: #e0e9ff;
+  stroke: #0046DD;
+  stroke-width: 2;
+}
+
+.boxplot__median {
+  stroke: var(--color-text-primary);
+  stroke-width: 3;
+}
+
+.boxplot__whisker {
+  stroke: #94a3b8;
+  stroke-width: 2;
+  stroke-dasharray: 5 4;
+}
+
+.boxplot__cap {
+  stroke: #94a3b8;
+  stroke-width: 2;
+}
+
+.boxplot__outlier {
+  fill: #fee2e2;
+  stroke: #dc2626;
+  stroke-width: 2;
+}
+
+.boxplot__axis {
+  stroke: var(--color-border);
+  stroke-width: 1;
+}
+
+.boxplot__tick {
+  font-size: 12px;
+  fill: #94a3b8;
+}
+
+.boxplot__label {
+  font-size: 12px;
+  font-weight: 600;
+  fill: var(--color-text-secondary);
+}
+
+.boxplot__label--strong { fill: var(--color-text-primary); }
+.boxplot__label--danger { fill: #dc2626; }
+
+.analysis__box-facts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 32px;
+}
+
+/* Fórmulas */
+.analysis__formulas {
+  margin-top: auto;
+  font-size: 13px;
+  color: var(--color-text-secondary);
+}
+
+.analysis__formulas summary {
+  cursor: pointer;
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.analysis__formulas ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 8px;
+  padding: 12px 14px;
+  background: var(--color-sidebar-bg);
+  border-radius: var(--radius-sm);
+  line-height: 1.5;
+}
+
+.analysis__formulas strong {
+  color: var(--color-text-primary);
+}
+
+/* Estado sem dados */
+.analysis__empty-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.analysis__footer {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  padding-top: 24px;
+  border-top: 1px solid var(--color-border);
+  text-align: center;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .analysis__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .analysis__metrics {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .analysis__metrics .metric-card:nth-child(2) {
+    border-right: none;
+  }
+
+  .analysis__metrics .metric-card:nth-child(-n + 2) {
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .analysis__box-facts {
+    grid-template-columns: 1fr;
+  }
+
+  .analysis__empty-actions .btn,
+  .history__actions .btn {
+    width: 100%;
+  }
+
+  .analysis__footer {
+    margin-bottom: 84px;
+  }
+}

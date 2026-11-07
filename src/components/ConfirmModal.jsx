@@ -1,7 +1,7 @@
 import Button from './Button'
 import './ConfirmModal.css'
 
-function ConfirmModal({ message, onConfirm, onCancel }) {
+function ConfirmModal({ message, onConfirm, onCancel, confirmLabel = 'Excluir', confirmVariant = 'danger' }) {
   return (
     <div className="modal-overlay" onClick={onCancel}>
       <div className="modal" onClick={(e) => e.stopPropagation()}>
@@ -10,8 +10,8 @@ function ConfirmModal({ message, onConfirm, onCancel }) {
           <Button variant="outline" onClick={onCancel}>
             Cancelar
           </Button>
-          <Button variant="danger" onClick={onConfirm}>
-            Excluir
+          <Button variant={confirmVariant} onClick={onConfirm}>
+            {confirmLabel}
           </Button>
         </div>
       </div>

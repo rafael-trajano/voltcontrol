@@ -21,12 +21,6 @@
   margin-top: 6px;
 }
 
-.questions-page__privacy {
-  font-size: 13px;
-  color: var(--color-text-muted);
-  text-align: center;
-}
-
 .questions-page__footer {
   font-size: 13px;
   color: var(--color-text-muted);
@@ -45,16 +39,4 @@
     font-size: 28px;
   }
 
-  /* só afasta o rodapé do aviso de privacidade, sem mexer no resto do layout */
-  .questions-page > .page-footer {
-    margin-top: 84px;
-  }
-
-  .questions-page__privacy {
-    margin: -10px 0;
-    font-size: 11px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
 }

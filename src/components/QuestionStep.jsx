@@ -1,3 +1,4 @@
+import { useEffect, useRef } from 'react'
 import Button from './Button'
 import './QuestionStep.css'
 
@@ -17,6 +18,12 @@ function QuestionStep({
   error,
 }) {
   const progressPercent = (currentStep / totalSteps) * 100
+  const inputRef = useRef(null)
+
+  // Foca o campo só em computador (mouse/trackpad); no celular isso abriria o teclado
+  useEffect(() => {
+    if (window.matchMedia('(pointer: fine)').matches) inputRef.current?.focus()
+  }, [currentStep])
 
   function handleKeyDown(e) {
     if (e.key === 'Enter') onNext()
@@ -52,7 +59,7 @@ function QuestionStep({
             placeholder={placeholder}
             onChange={(e) => onChange(e.target.value)}
             onKeyDown={handleKeyDown}
-            autoFocus
+            ref={inputRef}
           />
         </div>
 

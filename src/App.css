@@ -58,6 +58,11 @@ h1, h2, h3 {
   background: var(--color-bg);
 }
 
+/* Ícone (favicon) ao lado do título — só no celular */
+.page-title-icon {
+  display: none;
+}
+
 /* Animações */
 
 @keyframes fadeIn {
@@ -77,8 +82,39 @@ h1, h2, h3 {
   }
 
   .main-with-sidebar {
-    padding: 24px 20px 80px;
+    padding: 24px 20px 84px;
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
+
+  /* Raio + título sempre em uma linha só */
+  .page-header__title,
+  .questions-page__title {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+    font-size: clamp(20px, 7vw, 28px);
+  }
+
+  .page-title-icon {
+    display: block;
+    width: 0.9em;
+    height: 0.9em;
+    flex-shrink: 0;
+  }
+
+  /* Cada página ocupa a altura toda e o rodapé fica sempre embaixo */
+  .main-with-sidebar > * {
+    flex: 1;
+  }
+
+  .page-footer,
+  .dashboard__footer,
+  .history__footer,
+  .analysis__footer {
+    margin-top: auto;
   }
 }

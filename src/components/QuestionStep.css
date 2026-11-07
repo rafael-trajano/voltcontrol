@@ -132,6 +132,34 @@
 }
 
 @media (max-width: 768px) {
+  /* Campo de mês no celular: seta própria, centralizada à direita */
+  .question-step__input[type='month'] {
+    position: relative;
+    min-height: 52px;
+    padding-right: 48px;
+    -webkit-appearance: none;
+    appearance: none;
+    /* seta própria, centralizada à direita */
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") no-repeat right 18px center;
+    cursor: pointer;
+  }
+
+  .question-step__input[type='month']::-webkit-date-and-time-value {
+    text-align: left;
+  }
+
+  /* esconde a seta nativa, mas deixa a caixa toda clicável para abrir o seletor */
+  .question-step__input[type='month']::-webkit-calendar-picker-indicator {
+    position: absolute;
+    inset: 0;
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    cursor: pointer;
+  }
+
   .question-step {
     flex: 1;
     display: flex;

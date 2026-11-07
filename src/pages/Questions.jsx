@@ -19,7 +19,10 @@ function Questions() {
   return (
     <div className="questions-page">
       <div className="questions-page__header">
-        <h1 className="questions-page__title">Adicionar Conta</h1>
+        <h1 className="questions-page__title">
+          <img src="/favicon.svg" alt="" className="page-title-icon" />
+          Adicionar Conta
+        </h1>
         <p className="questions-page__subtitle">
           Registre sua conta de energia e acompanhe seu consumo mês a mês.
         </p>
@@ -40,10 +43,6 @@ function Questions() {
         inputType={currentStep.inputType}
         error={errorMessage}
       />
-
-      <p className="questions-page__privacy">
-        Seus dados são armazenados apenas no seu navegador.
-      </p>
 
       <PageFooter />
     </div>

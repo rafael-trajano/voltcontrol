@@ -1,18 +1,18 @@
 export const FORM_STEPS = [
   {
-    question: 'Quanto você gostaria de pagar por mês?',
+    question: 'Quanto você gostaria de pagar por mês de energia?',
     prefix: 'R$',
     field: 'goalValue',
     inputType: 'number',
-    placeholder: '150,00',
+    placeholder: 'Ex: 150',
     hint: 'Defina sua meta mensal de gasto com energia.',
   },
   {
-    question: 'Quanto foi o valor da sua última conta?',
+    question: 'Quanto foi o valor da sua última conta de energia?',
     prefix: 'R$',
     field: 'lastBillValue',
     inputType: 'number',
-    placeholder: '180,00',
+    placeholder: 'Ex: 180',
     hint: 'Informe o valor total da fatura do mês anterior.',
   },
   {
@@ -20,7 +20,7 @@ export const FORM_STEPS = [
     prefix: 'kWh',
     field: 'lastKwh',
     inputType: 'number',
-    placeholder: '180',
+    placeholder: 'Ex: 180',
     hint: 'Você encontra essa informação na sua fatura de energia.',
   },
   {
@@ -28,7 +28,7 @@ export const FORM_STEPS = [
     prefix: 'R$/kWh',
     field: 'kwhRate',
     inputType: 'number',
-    placeholder: '0,7',
+    placeholder: 'Ex: 0,9',
     hint: 'Consulte sua fatura ou o site da sua distribuidora.',
   },
   {

@@ -18,7 +18,7 @@ function Navbar() {
           aria-label="Adicionar Conta"
           className={({ isActive }) => `navbar__item ${isActive ? 'navbar__item--active' : ''}`}
         >
-          <PageIcon name="add" size={22} className="navbar__icon" />
+          <PageIcon name="add" size={26} className="navbar__icon" />
           <span className="navbar__label">Adicionar Conta</span>
         </NavLink>
         <NavLink
@@ -26,7 +26,7 @@ function Navbar() {
           aria-label="Dashboard"
           className={({ isActive }) => `navbar__item ${isActive ? 'navbar__item--active' : ''}`}
         >
-          <PageIcon name="dashboard" size={22} className="navbar__icon" />
+          <PageIcon name="dashboard" size={26} className="navbar__icon" />
           <span className="navbar__label">Dashboard</span>
         </NavLink>
         <NavLink
@@ -34,7 +34,7 @@ function Navbar() {
           aria-label="Histórico"
           className={({ isActive }) => `navbar__item ${isActive ? 'navbar__item--active' : ''}`}
         >
-          <PageIcon name="history" size={22} className="navbar__icon" />
+          <PageIcon name="history" size={26} className="navbar__icon" />
           <span className="navbar__label">Histórico</span>
         </NavLink>
         <NavLink
@@ -42,7 +42,7 @@ function Navbar() {
           aria-label="Análise"
           className={({ isActive }) => `navbar__item ${isActive ? 'navbar__item--active' : ''}`}
         >
-          <PageIcon name="analysis" size={22} className="navbar__icon" />
+          <PageIcon name="analysis" size={26} className="navbar__icon" />
           <span className="navbar__label">Análise</span>
         </NavLink>
       </nav>

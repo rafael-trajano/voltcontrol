@@ -82,7 +82,7 @@ h1, h2, h3 {
   }
 
   .main-with-sidebar {
-    padding: 24px 20px 84px;
+    padding: 24px 20px 68px;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
